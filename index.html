@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portail Qualité & Inspection</title>
+
+<style>
+:root{
+    --primary:#0F4C81;
+    --secondary:#1F6FB2;
+    --accent:#00A3E0;
+    --success:#28A745;
+    --warning:#FF9800;
+    --danger:#DC3545;
+    --light:#F4F7FA;
+    --dark:#1E293B;
+    --white:#FFFFFF;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Segoe UI, Arial, sans-serif;
+    background:#eef3f8;
+    color:var(--dark);
+}
+
+/* HEADER */
+
+header{
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+    color:white;
+    padding:30px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.15);
+}
+
+.header-content{
+    max-width:1200px;
+    margin:auto;
+}
+
+header h1{
+    font-size:2.5rem;
+    margin-bottom:10px;
+}
+
+header p{
+    opacity:0.9;
+}
+
+/* KPI */
+
+.kpi-container{
+    max-width:1200px;
+    margin:30px auto;
+    padding:0 20px;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.kpi{
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.kpi-value{
+    font-size:2rem;
+    font-weight:bold;
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+.kpi-title{
+    color:#666;
+}
+
+/* TILES */
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+}
+
+.section-title{
+    margin-bottom:25px;
+    color:var(--primary);
+    font-size:1.8rem;
+    text-align:center;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+.card-header{
+    padding:25px;
+    color:white;
+    text-align:center;
+    font-size:3rem;
+}
+
+.inspecteurs{
+    background:#1F6FB2;
+}
+
+.inspection{
+    background:#0F4C81;
+}
+
+.defauts{
+    background:#DC3545;
+}
+
+.rapports{
+    background:#28A745;
+}
+
+.card-body{
+    padding:25px;
+}
+
+.card h2{
+    color:var(--primary);
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#666;
+    line-height:1.5;
+    min-height:90px;
+}
+
+.btn{
+    display:block;
+    width:100%;
+    text-align:center;
+    text-decoration:none;
+    padding:14px;
+    color:white;
+    border-radius:8px;
+    font-weight:bold;
+    margin-top:15px;
+    transition:0.3s;
+}
+
+.btn-blue{
+    background:var(--primary);
+}
+
+.btn-red{
+    background:var(--danger);
+}
+
+.btn-green{
+    background:var(--success);
+}
+
+.btn:hover{
+    opacity:0.9;
+}
+
+/* FOOTER */
+
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    margin-top:50px;
+    padding:25px;
+}
+
+.version{
+    margin-top:10px;
+    color:#cbd5e1;
+    font-size:0.85rem;
+}
+
+@media(max-width:768px){
+
+    header h1{
+        font-size:1.8rem;
+    }
+
+    .kpi-value{
+        font-size:1.5rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-content">
+        <h1>Portail Qualité & Inspection</h1>
+        <p>Système centralisé de gestion des inspections, défauts et rapports</p>
+    </div>
+</header>
+
+<section class="kpi-container">
+
+    <div class="kpi">
+        <div class="kpi-value">✓</div>
+        <div class="kpi-title">Inspecteurs</div>
+    </div>
+
+    <div class="kpi">
+        <div class="kpi-value">🔍</div>
+        <div class="kpi-title">Inspections</div>
+    </div>
+
+    <div class="kpi">
+        <div class="kpi-value">⚠</div>
+        <div class="kpi-title">Défauts</div>
+    </div>
+
+    <div class="kpi">
+        <div class="kpi-value">📊</div>
+        <div class="kpi-title">Rapports</div>
+    </div>
+
+</section>
+
+<div class="container">
+
+<h2 class="section-title">Accès rapide</h2>
+
+<div class="grid">
+
+    <div class="card">
+
+        <div class="card-header inspecteurs">
+            👨‍🔬
+        </div>
+
+        <div class="card-body">
+            <h2>Inspecteurs</h2>
+
+            <p>
+                Consultation et gestion des inspecteurs responsables
+                des activités de contrôle qualité.
+            </p>
+
+            <a class="btn btn-blue"
+               href="https://etudiantcegeplapocatiereqc-my.sharepoint.com/personal/202681848_cegeplapocatiere_qc_ca/Lists/Inspecteurs/AllItems.aspx?env=WebViewList"
+               target="_blank">
+                Accéder
+            </a>
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <div class="card-header inspection">
+            🔍
+        </div>
+
+        <div class="card-body">
+            <h2>Inspection</h2>
+
+            <p>
+                Consultation des inspections réalisées,
+                résultats et suivis de conformité.
+            </p>
+
+            <a class="btn btn-blue"
+               href="https://etudiantcegeplapocatiereqc-my.sharepoint.com/personal/202681848_cegeplapocatiere_qc_ca/Lists/Inspection/AllItems.aspx?env=WebViewList"
+               target="_blank">
+                Accéder
+            </a>
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <div class="card-header defauts">
+            ⚠️
+        </div>
+
+        <div class="card-body">
+            <h2>Défauts détectés</h2>
+
+            <p>
+                Gestion et suivi des défauts détectés ainsi
+                que des non-conformités observées.
+            </p>
+
+            <a class="btn btn-red"
+               href="https://etudiantcegeplapocatiereqc-my.sharepoint.com/personal/202681848_cegeplapocatiere_qc_ca/Lists/Dfauts%20dtects/AllItems.aspx?env=WebViewList"
+               target="_blank">
+                Accéder
+            </a>
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <div class="card-header rapports">
+            📊
+        </div>
+
+        <div class="card-body">
+            <h2>Rapports</h2>
+
+            <p>
+                Accès aux rapports d'inspection,
+                analyses et documentation qualité.
+            </p>
+
+            <a class="btn btn-green"
+               href="https://onedrive.live.com/?id=6AEF71CF50DDF7E4%21s9699d0a94f444a849dc36549b4b998cd&cid=6AEF71CF50DDF7E4&parId=6AEF71CF50DDF7E4%21sb069aec850004228b9e95ab8ee2f3bf8&o=OneUp&ls=true"
+               target="_blank">
+                Accéder
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+<footer>
+
+    <h3>Portail Qualité & Inspection</h3>
+
+    <p>
+        Centralisation des inspections, défauts détectés et rapports qualité
+    </p>
+
+    <div class="version">
+        Version 1.0 | GitHub Pages | 2026
+    </div>
+
+</footer>
+
+</body>
+</html>  
